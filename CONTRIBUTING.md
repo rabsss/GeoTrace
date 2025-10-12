@@ -83,8 +83,8 @@ git pull origin main
 git push origin feature/your-feature-name
 ```
 5. Open a Pull Request and provide:
-   * A clear title and summary
-   * A short description of what you changed
+  * A clear title and summary
+  * A short description of what you changed
 
 ## 💬 Need Help?
 If you get stuck or have questions:
