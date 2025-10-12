@@ -1,2 +1,2 @@
 # GPS_Logger
-GPS Logging android application with lambdanative.
+GPS Logging Android application built with [LambdaNative](https://www.lambdanative.org/).
