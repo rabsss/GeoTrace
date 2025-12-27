@@ -1,1 +1,1 @@
-config eventloop ln_core ln_glcore ln_glgui gps timestamp scheduler csv androidbackground
+androidbackground config csv eventloop gps ln_core ln_glcore ln_glgui scheduler timestamp
