@@ -76,3 +76,42 @@ jobs:
       with:
        name: apk
        path: /github/home/.cache/lambdanative/packages/*.apk
+
+  makesite:
+    name: fedora
+    runs-on: ubuntu-latest
+    needs: build
+    container:
+      image: fedora:43
+
+    steps:
+    - uses: actions/checkout@v4
+    - run: cat /etc/os-release
+    - name: install dependencies
+      run: |
+       dnf -y install autoconf automake awk diffutils gcc guile-reader-devel guile-commonmark
+       dnf -y install guile30-devel haunt make tar texinfo
+    - name: build site
+      working-directory: website
+      run: haunt build
+    - name: Upload static files as artifact
+      id: deployment
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: website/build
+
+  # Deployment job
+  deploy:
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: makesite
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
