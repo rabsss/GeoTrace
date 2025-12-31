@@ -29,6 +29,9 @@ jobs:
        git clone https://github.com/part-cw/lambdanative
        cd lambdanative
        git checkout b6e82ee343d8ea3c95e277d7e122baae9a5dc096
+       cd modules
+       rm -rf gps
+       git clone https://github.com/rabsss/gps_module gps
     - name: setup android
       run: |
        # https://stackoverflow.com/a/77215395
