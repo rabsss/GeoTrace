@@ -69,10 +69,15 @@
                  (li "Timestamped entries for each location fix")
                  (li "Saves data locally in a structured format")
                  (li "Easy to export and visualize with external tools
-                       (e.g., " (a (@ (href "https://www.osgeo.org/projects/qgis/")) "qGIS")
-                            ", " (a (@ (href "https://earth.google.com/")) "Google Earth)"))
-                 (li "Android support via " (a (@ (href "https://www.lambdanative.org/")) "LambdaNative")))
+                       (e.g., " (a (@ (href "https://www.osgeo.org/projects/qgis/"))
+				   "qGIS")
+                       ", " (a (@ (href "https://earth.google.com/"))
+			       "Google Earth)"))
+                 (li "Android support via " (a (@ (href "https://www.lambdanative.org/"))
+					       "LambdaNative")))
 		 (h2 "Download")
+		 (p "An Android apk is available at " (a (@ (href "GPSLogging-1.0-android-api28.apk"))
+							 "here") ".")
 		 (p "Source code is available at " (a (@ (href "https://github.com/rabsss/GPS_Logger"))
 						      "https://github.com/rabsss/GPS_Logger")))))
 

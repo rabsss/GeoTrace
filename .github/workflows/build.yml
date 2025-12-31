@@ -90,13 +90,18 @@ jobs:
     - name: install dependencies
       run: |
        dnf -y install autoconf automake awk diffutils gcc guile-reader-devel guile-commonmark
-       dnf -y install guile30-devel haunt make tar texinfo
+       dnf -y install guile30-devel haunt make tar texinfo unzip
     - name: build site
       working-directory: website
       run: haunt build
+    - name: download apk
+      uses: actions/download-artifact@v4
+      with:
+        name: apk
+        path: website/build
     - name: Upload static files as artifact
       id: deployment
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v4
       with:
         path: website/build
 
