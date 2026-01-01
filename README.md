@@ -49,7 +49,7 @@ cd GPS_Logger
 ### Build the Application
 
 ```bash
-./configure GPS_Logger android
+./configure GPSLogging android
 make
 ```
 The generated APK will be located at:
@@ -61,7 +61,7 @@ The generated APK will be located at:
 Using **adb**:
 
 ```bash
-adb install path/to/GPS_Logger.apk
+adb install path/to/GPSLogging.apk
 ```
 
 ## Contributing
