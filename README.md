@@ -1,6 +1,6 @@
-# GPS Logger
+# Geo Trace
 
-**GPS Logger** is an open-source Android application that records your device's GPS location in real-time.  
+**Geo Trace** is an open-source Android application that records your device's GPS location in real-time.  
 It’s lightweight, accurate, and built using **[LambdaNative](https://github.com/part-cw/lambdanative)** — a cross-platform Scheme-based framework for mobile and embedded applications.
 
 ---
@@ -42,8 +42,8 @@ You need:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/rabsss/GPS_Logger.git
-cd GPS_Logger
+git clone https://github.com/rabsss/GeoTrace.git
+cd GeoTrace
 ```
 
 ### Build the Application
@@ -80,10 +80,10 @@ If you’d like to improve this project, follow these steps:
    ```
 
 4. Push and open a Pull Request
-   Before contributing, please read the [CONTRIBUTING.md](https://github.com/rabsss/GPS_Logger?tab=contributing-ov-file) for guidelines.
+   Before contributing, please read the [CONTRIBUTING.md](https://github.com/rabsss/GeoTrace?tab=contributing-ov-file) for guidelines.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/rabsss/GPS_Logger?tab=MIT-1-ov-file) for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/rabsss/GeoTrace?tab=MIT-1-ov-file) for details.
 
 ## Contact 
  * Author - [rabsss](https://github.com/rabsss)
