@@ -1,6 +1,6 @@
-# Contributing to GPS Logger
+# Contributing to Geo Trace
 
-🎉 Thank you for your interest in contributing to **GPS Logger**!  
+🎉 Thank you for your interest in contributing to **Geo Trace**!  
 Your help makes this project better for everyone — whether you’re fixing a bug, adding a feature, or improving documentation.
 
 ---
@@ -9,7 +9,7 @@ Your help makes this project better for everyone — whether you’re fixing a b
 
 There are several ways you can contribute:
 
-- Report bugs or suggest improvements via [GitHub Issues](https://github.com/rabsss/GPS_Logger/issues)
+- Report bugs or suggest improvements via [GitHub Issues](https://github.com/rabsss/GeoTrace/issues)
 - Submit pull requests for new features or bug fixes
 - Improve or clarify documentation
 - Share ideas for project enhancements
@@ -21,8 +21,8 @@ There are several ways you can contribute:
 ### 1. Fork and Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/GPS_Logger.git
-cd GPS_Logger
+git clone https://github.com/<your-username>/GeoTrace.git
+cd GeoTrace
 ```
 
 ### 2. Set Up the Environment
@@ -38,13 +38,13 @@ Ensure that you have the following installed:
 ### 3. Build the Project
 
 ```bash
-./configure GPS_Logger android
+./configure GeoTrace android
 make
 ```
 
 Install on your device:
 ```bash
-adb install path/to/GPS_Logger.apk
+adb install path/to/GeoTrace.apk
 ```
 
 ## 📏 Coding Guidelines
@@ -88,8 +88,8 @@ git push origin feature/your-feature-name
 
 ## 💬 Need Help?
 If you get stuck or have questions:
- * Open a [Discussion](https://github.com/rabsss/GPS_Logger/discussions)
- * Or Open an issue via [Issues](https://github.com/rabsss/GPS_Logger/issues)
+ * Open a [Discussion](https://github.com/rabsss/GeoTrace/discussions)
+ * Or Open an issue via [Issues](https://github.com/rabsss/GeoTrace/issues)
    
 Your PR will be reviewed, and feedback may be provided before merging.
 
