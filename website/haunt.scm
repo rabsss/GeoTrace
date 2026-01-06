@@ -60,8 +60,8 @@
 	       `(
 		 (h1 "Geo Trace")
 		 (p "Geo Trace is an open-source Android application that records
-		     your device's GPS location in real-time.  It’s lightweight,
-                     accurate, and built using LambdaNative — a cross-platform
+		     your device's GPS location in real-time.  It's lightweight,
+                     accurate, and built using LambdaNative - a cross-platform
                      Scheme-based framework for mobile and embedded applications.")
 		 (h2 "Features")
 		 (ul
