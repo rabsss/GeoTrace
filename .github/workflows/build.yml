@@ -62,7 +62,7 @@ jobs:
        sed -i 's|gcc -Werror|gcc-14 -Werror|g' targets/linux/check-libraries
     - name: copy source
       run: |
-       cp -r GPSLogging lambdanative/apps
+       cp -r GeoTrace lambdanative/apps
     - name: android builds
       working-directory: lambdanative
       run: |
@@ -70,7 +70,7 @@ jobs:
        sed -i 's/python/python3/g' targets/android/check-tools
        # Make directory to avoid errors during build
        mkdir -p /home/build/.cache/lambdanative/android/support
-       ./configure GPSLogging android
+       ./configure GeoTrace android
        make
     - uses: actions/upload-artifact@v4
       with:

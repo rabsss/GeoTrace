@@ -62,7 +62,7 @@
     (set! gui (make-glgui))
 
     ;; Title
-    (glgui-label gui 120 (- (glgui-height-get) 30) 200 30 "GPS Logging" ascii_18.fnt White)
+    (glgui-label gui 120 (- (glgui-height-get) 30) 200 30 "GEO Trace" ascii_18.fnt White)
 
     ;; Start/Stop buttons
     (glgui-button-string gui 60 220 100 36 "Start" ascii_18.fnt start-action)

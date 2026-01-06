@@ -56,10 +56,10 @@
                sxml->html)))
 
 (define home-page
-  (static-page "GPS Logger" "index.html"
+  (static-page "Geo Trace" "index.html"
 	       `(
-		 (h1 "GPS Logger")
-		 (p "GPS Logger is an open-source Android application that records
+		 (h1 "Geo Trace")
+		 (p "Geo Trace is an open-source Android application that records
 		     your device's GPS location in real-time.  It’s lightweight,
                      accurate, and built using LambdaNative — a cross-platform
                      Scheme-based framework for mobile and embedded applications.")
@@ -76,12 +76,12 @@
                  (li "Android support via " (a (@ (href "https://www.lambdanative.org/"))
 					       "LambdaNative")))
 		 (h2 "Download")
-		 (p "An Android apk is available at " (a (@ (href "GPSLogging-1.0-android-api28.apk"))
+		 (p "An Android apk is available at " (a (@ (href "GeoTrace-1.0-android-api28.apk"))
 							 "here") ".")
-		 (p "Source code is available at " (a (@ (href "https://github.com/rabsss/GPS_Logger"))
-						      "https://github.com/rabsss/GPS_Logger")))))
+		 (p "Source code is available at " (a (@ (href "https://github.com/rabsss/GeoTrace"))
+						      "https://github.com/rabsss/GeoTrace")))))
 
-(site #:title "GPS Logger"
+(site #:title "GeoTrace"
       #:domain "rabsss.github.io"
       #:build-directory "build"
       #:default-metadata
