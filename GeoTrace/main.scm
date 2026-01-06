@@ -2,7 +2,6 @@
 
 (define gpslabel #f)
 (define status-label #f)
-(define toggling? #f)
 (define elapsed 0.0)
 (define logging-active #f)
 
@@ -27,7 +26,7 @@
 
 ;; toggle
 (define (logging-loop t)
-  (when toggling?
+  (when logging-active
     (set! elapsed (+ elapsed t))
     (when (> elapsed 5000.0)
       (let ((lat (gps-latitude))
@@ -42,13 +41,11 @@
 
 ;; button actions
 (define (start-action g w t x y)
-  (set! toggling? #t)
-  (set! elapsed 0.0)
   (set! logging-active #t)
+  (set! elapsed 0.0)
   (glgui-widget-set! gui status-label 'label "Waiting for GPS..."))
 
 (define (stop-action g w t x y)
-  (set! toggling? #f)
   (when logging-active
     (set! logging-active #f)
     (glgui-widget-set! gui status-label 'label "Logging stopped")))
