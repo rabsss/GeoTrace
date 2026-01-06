@@ -49,7 +49,7 @@ cd GeoTrace
 ### Build the Application
 
 ```bash
-./configure GPSLogging android
+./configure GeoTrace android
 make
 ```
 The generated APK will be located at:
@@ -61,7 +61,7 @@ The generated APK will be located at:
 Using **adb**:
 
 ```bash
-adb install path/to/GPSLogging.apk
+adb install path/to/GeoTrace.apk
 ```
 
 ## Contributing

@@ -62,7 +62,7 @@ jobs:
        sed -i 's|gcc -Werror|gcc-14 -Werror|g' targets/linux/check-libraries
     - name: copy source
       run: |
-       cp -r GPSLogging lambdanative/apps
+       cp -r GeoTrace lambdanative/apps
     - name: android builds
       working-directory: lambdanative
       run: |
@@ -70,9 +70,53 @@ jobs:
        sed -i 's/python/python3/g' targets/android/check-tools
        # Make directory to avoid errors during build
        mkdir -p /home/build/.cache/lambdanative/android/support
-       ./configure GPSLogging android
+       ./configure GeoTrace android
        make
     - uses: actions/upload-artifact@v4
       with:
        name: apk
        path: /github/home/.cache/lambdanative/packages/*.apk
+
+  makesite:
+    name: fedora
+    runs-on: ubuntu-latest
+    needs: build
+    container:
+      image: fedora:43
+
+    steps:
+    - uses: actions/checkout@v4
+    - run: cat /etc/os-release
+    - name: install dependencies
+      run: |
+       dnf -y install autoconf automake awk diffutils gcc guile-reader-devel guile-commonmark
+       dnf -y install guile30-devel haunt make tar texinfo unzip
+    - name: build site
+      working-directory: website
+      run: haunt build
+    - name: download apk
+      uses: actions/download-artifact@v4
+      with:
+        name: apk
+        path: website/build
+    - name: Upload static files as artifact
+      id: deployment
+      uses: actions/upload-pages-artifact@v4
+      with:
+        path: website/build
+
+  # Deployment job
+  deploy:
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: makesite
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
